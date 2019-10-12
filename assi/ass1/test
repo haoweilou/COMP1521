@@ -1,0 +1,6 @@
+gcc life.c
+echo 30 | ./a.out > c.out
+cat board1.s prog.s > life.s
+echo 30 | 1521 spim -file life.s | sed 1d > mips.out
+diff c.out mips.out
+echo Passed test

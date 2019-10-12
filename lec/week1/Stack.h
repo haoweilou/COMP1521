@@ -1,0 +1,36 @@
+#define MAX_STACK 100
+typedef int Item;
+typedef struct _stack {
+    int top;
+    Item items[MAX_STACK];
+}Stack;
+
+void initStack(Stack *s) {
+    s->top = 0;
+}
+
+int pushStack (Stack *s, Item val) {
+    if (s->top == MAX_STACK) return 0;
+    s->items[s->top] = val;
+    s->top++;
+    return 1;
+}
+
+int popStack (Stack *s) {
+    if (s->top == 0) return -1;
+    s->top--;
+    return s->items[s->top];
+}
+
+int isEmpty(Stack *s) {
+    if(s->top == 0) 
+        return 1;
+    else
+        return 0;
+    
+}
+void printStack(Stack *s) {
+    for(int i = 0; i<s->top ; i++)
+        printf("%d ",s->items[i]);
+    printf("\n");
+}

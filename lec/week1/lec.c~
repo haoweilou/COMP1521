@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include "Stack.h"
+int main(void) {
+    
+    int a;
+    if(scanf("%d", &x)==0) return 0;
+    
+    return 0;
+}
